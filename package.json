@@ -1,0 +1,18 @@
+{
+  "name": "api-membership-hub",
+  "version": "1.0.0",
+  "description": "Secure API membership website with environment variables",
+  "main": "index.html",
+  "scripts": {
+    "build": "node deploy.js",
+    "dev": "node deploy.js && npx http-server dist -p 3000",
+    "deploy": "node deploy.js && gh-pages -d dist"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.0"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.0",
+    "gh-pages": "^5.0.0"
+  }
+}
