@@ -1,34 +1,82 @@
-# Environment variables (NEVER commit these)
-.env
-.env.local
-.env.production
-.env.development
+############################
+#  OS-level junk
+############################
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon?
+Desktop.ini
 
-# Build output
-dist/
-build/
+############################
+#  Editors / IDEs
+############################
+# VS Code
+.vscode/
+.history/
+# JetBrains (WebStorm, IntelliJ, etc.)
+.idea/
+# Vim / Nano
+*.swp
+*.swo
 
-# Node modules
+############################
+#  Environment & secrets
+#  – ignore every .env* variant anywhere
+############################
+.env*
+# (⬆︎ catches .env, .env.local, .env.example, etc.)
+
+############################
+#  Node / JavaScript
+############################
 node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
+# Optional: comment these in if you don’t commit lock files
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
 
-# OS generated files
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
+############################
+#  Build & coverage output
+############################
+dist/
+build/
+coverage/
+.nyc_output/
+lcov-report/
 
-# IDE files
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
-
-# Logs
+############################
+#  Logs & temp files
+############################
 *.log
+*.tmp
+*.temp
+*.pid
+*.seed
+*.tgz
+
+############################
+#  Visual Studio (.NET / C#)
+############################
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+[Bb]in/
+[Oo]bj/
+*.pdb
+*.cache
+*.dll
+*.exe
+
+############################
+#  Python (just in case)
+############################
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
